@@ -1,0 +1,122 @@
+body { font-family: sans-serif; margin:0; padding:0; font-size: 100%;}
+h1 { font-size:2em;}
+h2 { font-size:1.2em;}
+th { text-align:left;}
+img { border:none;}
+.corkboard {background: #f80 url(/static/images/corkboard.jpg); padding:10px;}
+ul.cards {
+  list-style-type:none;
+  margin:0;
+
+  display:block;
+}
+ul.cards li.card {
+  display:block;
+  float:left;
+  margin:0.2em; padding:0.2em; background:#ff0 url(/static/images/karopapier.png); border:1px solid #440;
+  overflow:hidden;
+}
+.cards h2, .cards p { padding:0; margin:2px;}
+.cards li .description { border-top:1px solid red;}
+.cards li .metadata { border-top: 1px solid green; width:100%; font-size:0.8em;}
+ul.cards li.selected {
+  background-color:#f80;
+}
+
+ul.cards li li { width:inherit; height:inherit; font-size:inherit;}
+
+/* card sizes */
+ul.size1 li { width: 15em; height:10em; font-size:0.7em;}
+ul.size2 li { width: 15em; height:10em; font-size:1em;}
+ul.size3 li { width: 21em; height:14em; font-size:1em;}
+ul.size4 li { width: 24em; height:16em; font-size:1em;}
+
+/* card features  */
+
+ul.cards li li { width:inherit; height:inherit; font-size:inherit;}
+
+.size1 .metadata, .size2 .metadata, .size1 .description, .size2 .description { display:none; }
+.size3 .metadata { display:none;}
+ul.size6 ul.discussion li { display:block;}
+
+ul.sizr { list-style-type:none;}
+ul.sizr li { display:inline;}
+
+img.imageButton { vertical-align: middle; border:1px solid black; padding:2px; margin:2px; background:#ccc; border-color: #fff #000 #000 #fff;}
+img.imageButton:hover { background:#888;}
+div.hugeCard { background:#ff0 url(/static/images/karopapier.png) top left; border:1px solid black; padding:10px;}
+
+ul.cards li .effort {
+  position:absolute;
+  bottom:-0.25em;
+  right:-0.05em;
+  font-size:10em;
+  opacity: 0.1;
+}
+
+ul.cards li .cardTools {
+  display:none;
+  position:absolute;
+  bottom:0px;
+  right:0px;
+  list-style-type:none;
+  margin:0; padding:0;
+}
+ul.cards li .cardTools li {
+  margin:0; padding:0;
+  display:inline;
+}
+
+ul.cards li:hover .cardTools {
+  display:block;
+}
+
+/* layout */
+
+#header { border-bottom:1px solid black; padding:5px; background-color: #8f8;} 
+#header h1, #header p  { margin:0; padding:0;}
+#header h1 a { text-decoration:none; color:black; font-family: serif; font-weight:bold; font-style:italic;}
+#spinner { background-color:#fff; border:1px solid black; padding:2px; position:absolute; right:10px; top:15px;}
+
+
+#content {padding:0;}
+
+#footer { border-top:1px solid black; padding:5px;}
+
+ul.localNavigation { list-style-type:none; margin:0; padding:5px; display:block; background:#888; border-bottom:1px solid black;}
+.localNavigation li { margin:2px  ; padding:0; float:left;}
+
+/* Form elements */
+form label {display:block; }
+input.huge { font-size:2em;}
+
+/* clearfix f. corkboard */
+
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+.track { 
+  background-color: #444; 
+  position: relative; 
+  height: 10px; width: 10em; 
+  cursor: pointer; z-index: 0;
+  margin-top:10px;
+} 
+.handle { 
+  background:transparent url(/static/images/slider_handle.png); 
+  position: absolute; 
+  height: 20px; width: 10px; top: -5px; 
+  cursor: move; z-index: 2;
+}
