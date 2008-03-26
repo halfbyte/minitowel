@@ -1,0 +1,12 @@
+miniTowel
+---------
+
+This is a minimal camping app thought of as a UI playground for ideas I want
+to see implemented in a card based agile planning tool.
+
+Its Javascript functions are based on a rather descent version of prototype 
+and script.aculo.us
+
+Feel free to embrace and extend
+
+Jan Krutisch <jan (at) krutisch.de

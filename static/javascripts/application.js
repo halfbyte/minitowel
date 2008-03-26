@@ -19,6 +19,7 @@ Event.observe(window, 'dom:loaded', function(e) {
           })
         })
       })
+      
     }
     if ($('zoomSlider')) {
       new Control.Slider('zoomSliderHandle', 'zoomSlider', {
@@ -38,6 +39,22 @@ Event.observe(window, 'dom:loaded', function(e) {
         }
       });
     }
+    $$('ul#cardList li.card').each(function(element) {
+      element.observe('click', function() {
+        var now = new Date().getTime();
+        // TODO: Übliche Werte f. Doppelklick?
+        if (element.lastClicked && (element.lastClicked + 500) > now) {
+          // this is a double click!
+          console.log(element.select('.editLink').first().href)
+          window.location.href = element.select('.editLink').first().href
+        } else {
+          element.lastClicked = now
+        }
+
+      })
+    })
+    
+    
   }
   Ajax.Responders.register({ 
     onCreate: function() { $('spinner').show(); }, 
