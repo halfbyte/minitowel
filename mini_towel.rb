@@ -123,7 +123,7 @@ module MiniTowel::Views
   def layout
     html do
       head do
-        title((@title ? @title : "" ) + " - miniTowel")
+        title((@title ? @title : "" ) + " - miniTowel experimental")
         link :rel => "stylesheet", 
               :href => R(Static, 'stylesheets/style.css'), 
               :type => "text/css", 
