@@ -7,6 +7,11 @@ to see implemented in a card based agile planning tool.
 Its Javascript functions are based on a rather descent version of prototype 
 and script.aculo.us
 
+Needs the gems camping and RedCloth plus sqlite3 and adapters.
+
+Start the application with:
+> camping mini_towel.rb
+
 Feel free to embrace and extend
 
-Jan Krutisch <jan (at) krutisch.de
+Jan Krutisch <jan (at) krutisch.de>
