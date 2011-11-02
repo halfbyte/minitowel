@@ -166,7 +166,7 @@ module MiniTowel::Views
   ########################## action templates ##############################
 
   def list      
-    ul.localNavigation.clearfix do
+    ul.localNavigation.clearfix.dingens! do
       li do
         a :href => R(New) do 
           img :src => R(Static, "images/new.png"), 
@@ -177,8 +177,8 @@ module MiniTowel::Views
       end
       li "Zoom:", :style => 'margin-top:10px;'
       li do
-        div.zoomSlider!.track :style => "width:10em;" do
-          div.zoomSliderHandle!.handle "", :style => 'width:0.5em;' 
+        div.track.zoomSlider! :style => "width:10em;" do
+          div.handle.zoomSliderHandle! "", :style => 'width:0.5em;' 
         end
       end
     end      
@@ -194,7 +194,7 @@ module MiniTowel::Views
     div.corkboard do
       h2 "Create new Card"
       div.hugeCard do
-        errors_for(@entity)
+        #errors_for(@entity)
         form :action => R(New), :method => 'POST' do
           _form
           p do
@@ -317,6 +317,6 @@ module MiniTowel::Helpers
 end
 
 def MiniTowel.create
-  Camping::Models::Session.create_schema
+  #Camping::Models::Session.create_schema
   MiniTowel::Models.create_schema
 end
